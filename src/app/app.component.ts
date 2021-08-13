@@ -54,5 +54,10 @@ export class AppComponent {
     this.user.email=this.signupForm.value.userData.email;
     this.user.secretQuestion = this.signupForm.value.userData2.secret;
     this.user.answer=this.signupForm.value.userData2.questionAnswer;
+
+    this.signupForm.setValue({userData2:{secret:"teacher",questionAnswer:""},userData:{username:"Blanky Mac Blinkblank",email:"i-mister@blank.com",gender:"male"}}); //
+    setTimeout(() => {
+      this.signupForm.reset();
+    },1500)
   }
 }
